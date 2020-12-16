@@ -227,9 +227,10 @@ public class Application {
 
     public static void main(String[] args) {
         AccountService accountService = new AccountServiceImpl();
-        TransactionService transactionService = new TransactionServiceImplMobile();
         TransactionService transactionService = new TransactionServiceImpl();
         AccountService accountService = new AccountServiceImpl(transactionService);
+        TransactionService transactionService = new TransactionServiceImplMobile();
+
         Application application = new Application(accountService, transactionService);
         application.start();
     }
