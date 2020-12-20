@@ -55,7 +55,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account deposit(int accountNo, int amount) {
-        return null;
         Account account=account = getAccount(accountNo);
         if (account == null) {
             return null;

@@ -14,14 +14,12 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public Transaction createTransaction(Transaction transaction) {
-        return null;
         transactions[counter++] = transaction;
         return transaction;
     }
 
     @Override
     public Transaction[] getTransactions(int accountNo) {
-        return new Transaction[0];
         Transaction[] temp = new Transaction[100];
         int counterTemp = 0;
         for (int i = 0; i < counter; i++) {
